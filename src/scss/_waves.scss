@@ -1,0 +1,58 @@
+.waves {
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+
+    .wave-01 {
+        animation: wave1 3s ease-in-out infinite alternate;
+    }
+
+    .wave-02 {
+        animation: wave2 3s 1.2s ease-in-out infinite alternate;
+    }
+
+    .wave-03 {
+        animation: dash1 3s 0.7s cubic-bezier(0, 1.23, 1, 0.11) infinite alternate;
+        stroke-dasharray: 150;
+        stroke: #ccc;
+        stroke-width: 3px;
+    }
+}
+
+@keyframes wave1 {
+    from {
+        transform: translateX(-50px);
+    }
+}
+
+@keyframes wave2 {
+    from {
+        transform: translateX(-30px);
+    }
+}
+
+@keyframes wave3 {
+    from {
+        transform: translateX(-20px);
+    }
+}
+
+@keyframes dash1 {
+    from {
+        stroke-dashoffset: 2000;
+    }
+}
+
+@media (max-width:991px){
+    .container {
+        grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+        grid-template-rows: minmax(auto, auto);
+    }
+    .container .box {
+        grid-column: unset !important;
+        grid-row: unset !important;
+    }
+
+}

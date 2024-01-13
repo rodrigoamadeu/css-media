@@ -1,0 +1,90 @@
+#video-container{
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    .container {
+        margin: 0 8rem;
+        display: flex;
+
+        .tittle-video{
+            margin: 4rem;
+            padding-right: 2rem;
+            width: 50%;
+           
+            h2 {
+                font-size: 2rem;
+                color: #444;
+            }
+            p{
+                font-size: 1.8rem;
+                text-align: justify;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                color: #777;
+            }
+        }
+        #player {
+            margin: 4rem;
+            width: 50%;
+            .fa {
+                font-size: 1.5rem;
+            }
+            position: relative;
+            display: flex;
+            width: max-content;
+            height: max-content;
+            justify-content: center;
+            align-items: center;
+            margin: 4rem auto;
+            video {
+                width: 50rem;
+                height: auto;
+                align-items: center;
+            }
+            .controls {
+                background-color: #333;
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                opacity: .5;
+                transition: opacity .4s;
+
+                &:hover {
+                    opacity: 1;
+                }
+                button{
+                    background: transparent;
+                    color: #fff;
+                    font-weight: bolder;
+                    text-shadow: 1px 1px 2px #000;
+                    border: none;
+                    cursor: pointer;
+                }
+
+                .timeline {
+                    display: flex;
+                    flex: 1;
+                    align-items: center;
+                    border: none;
+                    border-left: 2px solid #ddd;
+                    border-right: 2px solid #ddd; 
+                    .bar {
+                        background-color: #e00;
+                        height: 5px;
+                        flex: 1;
+
+                        .inner {
+                            background-color: #ccc;
+                            width: 0;
+                            height: 100%;
+                        }
+                    }
+                }
+
+    
+    
+            }
+        }
+    }
+}
